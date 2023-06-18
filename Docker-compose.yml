@@ -1,0 +1,22 @@
+version: "3"
+services:
+  test-runner:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    command: pytest
+
+  method-runner:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    command: python app.py
+
+  library-checker:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    command: sh -c "pip freeze | grep numpy && pip freeze | grep pandas && pip freeze | grep matplotlib && pip freeze | grep seaborn"
