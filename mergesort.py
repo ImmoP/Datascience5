@@ -1,8 +1,15 @@
 def merge_sort(lst):
+    """
+    Sortiert eine Liste mit dem Merge-Sort-Algorithmus.
 
+    Args:
+        lst (list): Die zu sortierende Liste.
 
+    Returns:
+        None (Die Sortierung erfolgt direkt auf der übergebenen Liste.)
 
-  if len(lst) <= 1:
+    """
+    if len(lst) <= 1:
         return
 
     mid = len(lst) // 2
@@ -35,14 +42,22 @@ def merge_sort(lst):
 
 
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+
+def plot_data(data):
+    x = range(len(data))
+    plt.figure(figsize=(8, 6))
+    plt.plot(x, data, marker='o', linestyle='-', color='blue')
+    plt.xlabel('Index')
+    plt.ylabel('Value')
+    plt.title('Merge Sort')
+    plt.grid(True)
+    plt.show()
+
+def mergeSort(list_to_sort_by_merge):
+    # Implementierung des Merge-Sort-Algorithmus hier
 
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-x = range(len(my_list))
-plt.plot(x, my_list)
-plt.show()
-
-merge_sort(my_list)
-
-x = range(len(my_list))
-plt.plot(x, my_list)
-plt.show()
+plot_data(my_list)
+mergeSort(my_list)
+plot_data(my_list
